@@ -12,7 +12,59 @@
 		<title>paul.wiki</title>
 	</head>
 	<body>
-		<h1>Hello World</h1>
-		<p>Welcome to paul.wiki</p>
+		<main>
+			<p class="domain">paul.wiki</p>
+			<h1>Here Be Dragons</h1>
+		</main>
 	</body>
 </html>
+
+<style>
+	:root {
+		--bg: #f9f9f7;
+		--fg: #1a1a1a;
+		--muted: #888;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--bg: #111110;
+			--fg: #e8e8e6;
+			--muted: #666;
+		}
+	}
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: var(--bg);
+		color: var(--fg);
+		font-family: Georgia, 'Times New Roman', serif;
+		min-height: 100dvh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	main {
+		text-align: center;
+	}
+
+	.domain {
+		font-family: ui-monospace, monospace;
+		font-size: 0.85rem;
+		color: var(--muted);
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75rem;
+	}
+
+	h1 {
+		font-size: clamp(2rem, 8vw, 4.5rem);
+		font-weight: normal;
+		letter-spacing: -0.02em;
+	}
+</style>
